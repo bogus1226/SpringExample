@@ -1,5 +1,7 @@
 package com.bogus.spring.ex.mybatis.bo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,15 @@ public class ReviewBO {
 	 	Review review = reviewDAO.selectReview(id);
 	 	
 	 	return review;
+	}
+	
+	public int addReview(int storeId, String menu, String userName, double point, String review) {
+		
+		return reviewDAO.insertReview(storeId, menu, userName, point, review);
+	}
+	
+	public int addReviewByObject(Review review) {
+	 	return reviewDAO.insertReviewByObject(review);
 	}
 	
 }
