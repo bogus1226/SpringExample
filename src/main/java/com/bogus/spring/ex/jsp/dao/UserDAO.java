@@ -14,5 +14,7 @@ public interface UserDAO {
 			, @Param("email") String email
 			, @Param("introduce") String introduce);
 	
+	public int insertUserByObject(User user);
+	
 	public User selectLastUser();
 }

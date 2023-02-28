@@ -26,6 +26,29 @@
 		)		
 	</insert>
 	
+	<insert id="insertUserByObject" parameterType="com.bogus.spring.ex.jsp.model.User"
+	useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO
+			`new_user`
+		(
+			`name`
+			, `yyyymmdd`
+			, `email`
+			, `introduce`
+			, `createdAt`
+			, `updatedAt`
+		)
+		VALUE
+		(
+			#{name}
+			, #{yyyymmdd}
+			, #{email}
+			, #{introduce}
+			, now()
+			, now()
+		)
+	</insert>
+	
 	<select id="selectLastUser" resultType="com.bogus.spring.ex.jsp.model.User">
 		SELECT
 			`id`
