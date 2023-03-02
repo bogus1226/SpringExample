@@ -35,9 +35,10 @@ public class JSTLController {
 		map.put("name", "염근효");
 		map.put("age", 28);
 		map.put("hobby", "댄스");
-		
+		userList.add(map);
 		
 		model.addAttribute("fruitList", fruitList);
+		model.addAttribute("userList", userList);
 		
 		return "jstl/ex02";
 	}

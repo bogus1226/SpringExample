@@ -43,7 +43,16 @@
 		<h4> ${fruit} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
 	</c:forEach>
 	
+	<%-- 예제 과제 입니다! --%>
+	<c:forEach var="user" items="${userList}" varStatus="status">
+		<%-- 한묶음 한번에 출력 --%>
+		<h4> ${user} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
 	
+		<%-- 하나씩 따로 출력 --%>
+		<h4> ${user.name} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
+		<h4> ${user.age} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
+		<h4> ${user.hobby} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
+	</c:forEach>
 	
 	
 	
