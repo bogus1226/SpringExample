@@ -40,19 +40,38 @@
 	
 	<%-- for(String fruit:fruitList) 향상된 for문 --%>
 	<c:forEach var="fruit" items="${fruitList}" varStatus="status">
-		<h4> ${fruit} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
+		<h4> ${fruit} ::::${status.count }, ${status.index}, ${status.first} , ${status.last}</h4>
 	</c:forEach>
 	
 	<%-- 예제 과제 입니다! --%>
 	<c:forEach var="user" items="${userList}" varStatus="status">
 		<%-- 한묶음 한번에 출력 --%>
-		<h4> ${user} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
+		<h4> ${user} ::::${status.count }, ${status.index}, ${status.first} , ${status.last}</h4>
 	
 		<%-- 하나씩 따로 출력 --%>
-		<h4> ${user.name} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
-		<h4> ${user.age} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
-		<h4> ${user.hobby} ::::${status.count }, ${status.index}, ${satus.first} , ${status.last}</h4>
+		<h4> ${user.name} ::::${status.count }, ${status.index}, ${status.first} , ${status.last}</h4>
+		<h4> ${user.age} ::::${status.count }, ${status.index}, ${status.first} , ${status.last}</h4>
+		<h4> ${user.hobby} ::::${status.count }, ${status.index}, ${status.first} , ${status.last}</h4>
 	</c:forEach>
+	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>나이</th>
+				<th>취미</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="user" items="${userList }" varStatus="status">
+				<tr>
+					<td>${user.name }</td>
+					<td>${user.age }</td>
+					<td>${user.hobby }</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 	
 	
 	
