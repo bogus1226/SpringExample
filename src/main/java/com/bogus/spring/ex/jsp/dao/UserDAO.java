@@ -21,4 +21,7 @@ public interface UserDAO {
 	public User selectLastUser();
 	
 	public List<User> selectUserList();
+	
+	public int selectCountEmail(@Param("email") String email);
+	
 }
